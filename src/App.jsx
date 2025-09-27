@@ -5,6 +5,8 @@ import Footer from "./Footer/Footer";
 import Navbar from "./Navbar";
 import TickedCard from "./TickedCard/TickedCard";
 
+import { ToastContainer } from "react-toastify";
+
 const fetchTicketData = async () => {
   const res = await fetch("/TicketData.json")
   return res.json()
@@ -31,7 +33,7 @@ const handleProgressClick = () => {
 
         {/* HERO CARD part ************ */}
         <div className="">
-          <Card1 ProgressCount={ProgressCount} onProgress={handleProgressClick}></Card1>
+          <Card1 progressCount={ProgressCount} onProgress={handleProgressClick}></Card1>
         </div>
 
         {/* ticket hedder */}
@@ -46,6 +48,8 @@ const handleProgressClick = () => {
 
         {/* footer Part  */}
         <Footer></Footer>
+
+        <ToastContainer position="top-right"></ToastContainer>
       </div>
     </>
   );
