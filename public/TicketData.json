@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "User unable to login with correct credentials.",
+    "customer": "John Doe",
+    "priority": "High",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 2,
+    "title": "Payment failure",
+    "description": "Payment gateway returning error for credit card transactions.",
+    "customer": "Emily Smith",
+    "priority": "Critical",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 3,
+    "title": "UI alignment bug",
+    "description": "Dashboard widgets misaligned on smaller screens.",
+    "customer": "Michael Brown",
+    "priority": "Medium",
+    "status": "Resolved",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 4,
+    "title": "Email not received",
+    "description": "Customer not receiving password reset email.",
+    "customer": "Sophia Wilson",
+    "priority": "High",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 5,
+    "title": "API timeout",
+    "description": "Orders API taking more than 30 seconds to respond.",
+    "customer": "David Johnson",
+    "priority": "Critical",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 6,
+    "title": "Mobile app crash",
+    "description": "App crashes on startup on Android 14 devices.",
+    "customer": "Olivia Martinez",
+    "priority": "High",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 7,
+    "title": "Slow loading dashboard",
+    "description": "Dashboard takes too long to load for enterprise customers.",
+    "customer": "William Lee",
+    "priority": "Medium",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 8,
+    "title": "Broken link in FAQ",
+    "description": "One of the FAQ page links leads to a 404 error.",
+    "customer": "Sophia Clark",
+    "priority": "Low",
+    "status": "Resolved",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 9,
+    "title": "Data export issue",
+    "description": "CSV export generates incomplete data sets.",
+    "customer": "James Miller",
+    "priority": "High",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 10,
+    "title": "Search not working",
+    "description": "Search results page always returns empty results.",
+    "customer": "Isabella Anderson",
+    "priority": "Critical",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  }, 
+  {
+    "id": 11,
+    "title": "Server downtime",
+    "description": "Main server went down for 2 hours causing service disruption.",
+    "customer": "Liam Harris",
+    "priority": "Critical",
+    "status": "Resolved",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 12,
+    "title": "Forgot password issue",
+    "description": "Users unable to reset their password via email link.",
+    "customer": "Emma Watson",
+    "priority": "High",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 13,
+    "title": "App push notifications not working",
+    "description": "Customers not receiving push notifications on iOS devices.",
+    "customer": "Noah Davis",
+    "priority": "Medium",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 14,
+    "title": "Invoice PDF download fails",
+    "description": "Downloading invoice PDF gives 500 server error.",
+    "customer": "Olivia Thomas",
+    "priority": "High",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 15,
+    "title": "Incorrect total in checkout",
+    "description": "Cart total calculation is incorrect when discount applied.",
+    "customer": "William Robinson",
+    "priority": "Critical",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 16,
+    "title": "Profile picture upload error",
+    "description": "Users cannot upload profile pictures larger than 2MB.",
+    "customer": "Sophia Lewis",
+    "priority": "Medium",
+    "status": "Resolved",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 17,
+    "title": "Wrong timezone in reports",
+    "description": "Generated reports show incorrect timezone data.",
+    "customer": "James Walker",
+    "priority": "Low",
+    "status": "Open",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 18,
+    "title": "Login OTP delayed",
+    "description": "OTP for login sometimes arrives after 10 minutes.",
+    "customer": "Isabella Young",
+    "priority": "High",
+    "status": "In-Progress",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 19,
+    "title": "Exported CSV format incorrect",
+    "description": "CSV export is missing headers for some columns.",
+    "customer": "Benjamin Hall",
+    "priority": "Medium",
+    "status": "Resolved",
+    "date": "2025-09-26"
+  },
+  {
+    "id": 20,
+    "title": "Search suggestions not showing",
+    "description": "Search bar does not display suggestions as user types.",
+    "customer": "Mia Allen",
+    "priority": "Low",
+    "status": "Open",
+    "date": "2025-09-26"
+  }
+]
