@@ -22,7 +22,7 @@ const handleProgressClick = () => {
 }
 
 // fetch promiss handler 
-  const cardPromise = fetchTicketData()
+  
   return (
     <>
       <div className="max-w-[1200px] mx-auto">
@@ -34,18 +34,7 @@ const handleProgressClick = () => {
           <Card1 ProgressCount={ProgressCount} onProgress={handleProgressClick}></Card1>
         </div>
 
-        {/* ticket hedder */}
-        <div className="max-w-[1200px] mx-auto mt-7 font-bold text-[35px]">
-          <h1>Customer Tickets</h1>
-        </div>
-
-        {/* ticket card  */}
-        <Suspense  fallback={<span className="loading loading-bars loading-xl"></span>}>
-          <TickedCard cardPromise={cardPromise}></TickedCard>
-        </Suspense>
-
-        {/* footer Part  */}
-        <Footer></Footer>
+        
       </div>
     </>
   );
