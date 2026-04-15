@@ -15,12 +15,15 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: HomePage,
-        loader: () => fetch("friendsData.json"),
+        loader: async () => {
+          const res = await fetch("/friendsData.json");
+          return res.json();
+        }
       },
       {
         path: "/friend/:id",
         Component: FriendDetailsPage,
-        loader: () => fetch("friendsData.json"),
+        loader: () => fetch("/friendsData.json"),
       },
       {
         path: "/timeline",

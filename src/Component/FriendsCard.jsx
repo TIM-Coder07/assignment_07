@@ -13,7 +13,7 @@ const FriendsCard = ({ data }) => {
     next_due_date,
   } = data;
 
-  // 🎨 Status color logic
+// color logic
   const statusColor =
     status === "overdue"
       ? "bg-red-100 text-red-600"
