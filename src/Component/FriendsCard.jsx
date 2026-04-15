@@ -3,7 +3,6 @@ import { NavLink } from "react-router";
 
 const FriendsCard = ({ data }) => {
   const {
-    id,
     name,
     picture,
     email,
