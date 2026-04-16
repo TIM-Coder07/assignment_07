@@ -33,7 +33,7 @@ const FriendDetailsPage = () => {
 
       <div className="bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
         {/* LEFT SIDE */}
-        <div className="bg-gradient-to-br from-pink-500 to-purple-600 text-white p-6 flex flex-col items-center md:w-1/3">
+        <div className="bg-linear-to-br from-pink-500 to-purple-600 text-white p-6 flex flex-col items-center md:w-1/3">
           <img
             src={friend.picture}
             alt={friend.name}
