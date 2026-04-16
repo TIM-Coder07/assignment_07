@@ -1,11 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
 import { RouterProvider } from "react-router/dom";
-import router from './Route/Root';
+import router from "./Route/Root";
+import { TimelineProvider } from "./Context/TimelineContext";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <TimelineProvider>
+      <RouterProvider router={router} />
+    </TimelineProvider>
   </StrictMode>,
-)
+);
