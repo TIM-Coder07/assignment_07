@@ -23,7 +23,8 @@ const StatusPage = () => {
         📊 Friendship Analytics
       </h1>
 
-      <div className="w-full max-w-md relative">
+      <div className="w-full max-w-md">
+        {/* PIE CHART */}
         {hasData ? (
           <PieChart
             data={data}
@@ -39,7 +40,7 @@ const StatusPage = () => {
             }}
           />
         ) : (
-          <div className="h-75 flex flex-col items-center justify-center bg-gray-100 rounded-2xl">
+          <div className="h-60 flex flex-col items-center justify-center bg-gray-100 rounded-2xl">
             <p className="text-gray-500 text-lg font-medium">
               No interactions yet
             </p>
@@ -48,6 +49,30 @@ const StatusPage = () => {
             </p>
           </div>
         )}
+
+        {/* LEGEND */}
+        <div className="mt-6 flex flex-col gap-3">
+          <div className="flex items-center gap-3">
+            <span className="w-4 h-4 rounded-full bg-pink-500"></span>
+            <p className="text-gray-700 text-sm">
+              Call (Pink) — Voice conversations
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="w-4 h-4 rounded-full bg-purple-500"></span>
+            <p className="text-gray-700 text-sm">
+              Text (Purple) — Messages and chats
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="w-4 h-4 rounded-full bg-indigo-500"></span>
+            <p className="text-gray-700 text-sm">
+              Video (Indigo) — Video calls
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
