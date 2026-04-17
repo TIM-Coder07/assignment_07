@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { TimelineContext } from "../Context/TimelineContext";
 
 const TimelinePage = () => {
   const { timeline } = useContext(TimelineContext);
+  const [filter, setFilter] = useState("All");
 
   const typeStyle = {
     Call: "bg-pink-500/10 text-pink-600 border-pink-200",
@@ -10,15 +11,37 @@ const TimelinePage = () => {
     Video: "bg-indigo-500/10 text-indigo-600 border-indigo-200",
   };
 
+  // FILTER LOGIC
+  const filteredTimeline =
+    filter === "All"
+      ? timeline
+      : timeline.filter((item) => item.type === filter);
+
   return (
     <div className="max-w-4xl mx-auto p-5">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800 text-center">
+
+      <h1 className="text-3xl font-bold mb-4 text-gray-800 text-center">
         📜 Timeline Activity
       </h1>
 
+      {/* DROPDOWN FILTER */}
+      <div className="flex justify-center mb-8">
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="All">All</option>
+          <option value="Call">Call</option>
+          <option value="Text">Text</option>
+          <option value="Video">Video</option>
+        </select>
+      </div>
+
+      {/* TIMELINE */}
       <div className="relative border-l-2 border-gray-200 pl-6 space-y-6">
 
-        {timeline.map((time) => {
+        {filteredTimeline.map((time) => {
           const style =
             typeStyle[time.type] || "bg-gray-100 text-gray-600";
 
@@ -39,9 +62,7 @@ const TimelinePage = () => {
 
               {/* CONTENT */}
               <div className="flex-1">
-                <p className="font-semibold text-gray-800">
-                  {time.title}
-                </p>
+                <p className="font-semibold text-gray-800">{time.title}</p>
                 <p className="text-sm text-gray-500">{time.date}</p>
               </div>
 

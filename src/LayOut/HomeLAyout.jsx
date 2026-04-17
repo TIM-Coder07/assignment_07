@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../Component/Header";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import FooterPage from "../Pages/FooterPage";
 import { ToastContainer } from "react-toastify";
+import { TimelineContext } from "../Context/TimelineContext";
+import Loader from "../Component/Loader";
 
 const HomeLAyout = () => {
+  const {isLoading} = useContext(TimelineContext)
+  const navigation = useNavigation();
+
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Loadding  */}
+      {isLoading && <Loader></Loader>}
+
+
       {/* Header */}
       <Header />
       <div>
@@ -14,7 +23,7 @@ const HomeLAyout = () => {
       </div>
       {/* Main Content */}
       <main className="flex-1">
-        <Outlet />
+        {navigation.state === "loading" ? <Loader></Loader> : <Outlet />}
       </main>
 
       {/* Footer */}

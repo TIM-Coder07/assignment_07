@@ -54,7 +54,7 @@ const Header = () => {
           open ? "max-h-60 opacity-100 pb-4" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white rounded-2xl shadow-lg p-4 flex  gap-2">
+        <div className="bg-white rounded-2xl shadow-lg p-4 flex flex-col  gap-2">
           <NavLink
             to="/"
             end
