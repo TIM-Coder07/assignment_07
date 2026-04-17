@@ -4,6 +4,7 @@ import callImg from "../assets/call.png";
 import textImg from "../assets/text.png";
 import videoImg from "../assets/video.png";
 import { TimelineContext } from "../Context/TimelineContext";
+import { toast } from "react-toastify";
 const FriendDetailsPage = () => {
   const { id } = useParams();
   const allData = useLoaderData() || [];
@@ -123,15 +124,17 @@ const FriendDetailsPage = () => {
               {/* CALL */}
               <button
                 className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-5 flex flex-col items-center gap-3 hover:scale-[1.02] duration-200"
-                onClick={() =>
+                onClick={() => {
                   addTimeline({
                     id: Date.now(),
                     type: "Call",
                     title: `Call with ${friend.name}`,
                     date: new Date().toLocaleDateString(),
-                    img:`${friend.picture}`
-                  })
-                }
+                    img: `${friend.picture}`,
+                  });
+
+                  toast.success(`📞 Called ${friend.name}`);
+                }}
               >
                 <img
                   src={callImg}
@@ -144,15 +147,17 @@ const FriendDetailsPage = () => {
               {/* TEXT */}
               <button
                 className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-5 flex flex-col items-center gap-3 hover:scale-[1.02] duration-200"
-                onClick={() =>
+                onClick={() => {
                   addTimeline({
                     id: Date.now(),
                     type: "Text",
                     title: `Text with ${friend.name}`,
                     date: new Date().toLocaleDateString(),
-                    img:`${friend.picture}`
-                  })
-                }
+                    img: `${friend.picture}`,
+                  });
+
+                  toast.info(`💬 Text sent to ${friend.name}`);
+                }}
               >
                 <img
                   src={textImg}
@@ -165,15 +170,17 @@ const FriendDetailsPage = () => {
               {/* VIDEO */}
               <button
                 className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-5 flex flex-col items-center gap-3 hover:scale-[1.02] duration-200"
-                onClick={() =>
+                onClick={() => {
                   addTimeline({
                     id: Date.now(),
                     type: "Video",
                     title: `Video with ${friend.name}`,
                     date: new Date().toLocaleDateString(),
-                    img:`${friend.picture}`
-                  })
-                }
+                    img: `${friend.picture}`,
+                  });
+
+                  toast.success(`🎥 Video call with ${friend.name}`);
+                }}
               >
                 <img
                   src={videoImg}
@@ -186,6 +193,7 @@ const FriendDetailsPage = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

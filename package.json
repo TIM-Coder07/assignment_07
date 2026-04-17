@@ -16,6 +16,7 @@
     "react-dom": "^19.2.4",
     "react-minimal-pie-chart": "^9.1.2",
     "react-router": "^7.14.1",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {

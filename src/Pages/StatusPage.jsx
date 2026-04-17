@@ -36,7 +36,7 @@ const StatusPage = () => {
             }
             labelStyle={{
               fontSize: "6px",
-              fill: "#fff",
+              fill: "black",
             }}
           />
         ) : (
